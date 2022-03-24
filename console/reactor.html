@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/socket.io/socket.io.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="/libs/spectrum.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/libs/spectrum.min.css">
+    <title>test</title>
+    <style>
+        body {
+            background-color: #363636;
+        }
+
+        main {
+            margin: 50px;
+            color: white;
+        }
+
+        button, input {
+            border: 3px solid black !important;
+        }
+
+        #color-picker, .colorPicker {
+            background: #c2c2c2;
+        }
+
+        .sp-thumb-inner {
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <button onclick="sendCommand('line','100')">line 100</button>
+    <button onclick="sendCommand('line','50')">line 50</button>
+    <button onclick="sendCommand('disco')">disco</button>
+    <br><br>
+    <div id="colorcontainer">
+
+    </div>
+    <input id="color-picker" value='#ffffff'/>
+    <br>
+    <button onclick="sendCommand('color','solid_black')">solid black</button>
+    <button onclick="sendCommand('color',`${pickedColor}`)">send color</button>
+    <button onclick="sendCommand('color','r')">remove color</button>
+    <br><br>
+    <button onclick="sendCommand('text',`${document.querySelector('#st').value}`)">text</button>
+    <input id="st"/><input id="text-color-picker" value='#000000' />
+    <br>
+    <button onclick="sendCommand('text',`r`)">remove text</button>
+    <br><br>
+    <button onclick="sendCommand('webpage',`${document.querySelector('#web-page-link').value}`)">link</button>
+    <input id="web-page-link"/>
+    <br><br>
+    <button onclick="sendCommand('audio-webpage',`${document.querySelector('#audio-web-page-link').value}`)">audio only link</button>
+    <input id="audio-web-page-link"/>
+    <br><br>
+    <button onclick="sendCommand('clear');">clear</button>
+    <br><br>
+    <button onclick="sendCommand('reload');">reload</button>
+    <br><br>
+    text {text} ----> set page text
+    <br>
+    clear ------------> clear the page from color and text
+    <br>
+    line {50 | 100} --> creates a black line {50 | 100}px high that moves through the page from top to bottom
+    <script src="/reactorConsole.js"></script>
+</main>
+</body>
+</html>

@@ -4,9 +4,9 @@ import * as hueLights from "./huelights.js";
 import express from "express";
 import {createServer} from "http";
 import { Server } from "socket.io";
-import path from 'path';
-const __dirname = path.resolve();
 import {config, cheerHandler, messageHandler} from "./chatreactor.js";
+
+const dirname = process.cwd();
 
 const app = express();
 const httpServer = createServer(app);
@@ -28,7 +28,7 @@ app.get('/reactorconsole', (request, response) => {
         response.send("access denied");
         return;
     }
-    response.sendFile(__dirname + "/console/reactor.html");
+    response.sendFile(dirname + "/console/reactor.html");
 });
 app.get('/feedSnake', (req, res) => {
     if (!isTokenValid(req.query.token)) {

@@ -54,7 +54,7 @@ function addPattern(pattern) {
 
 function preload() {
     // preload() runs once
-    const imgPath = '../img/'
+    const imgPath = '/imgs/'
     const imgPatternPath = 'space_invaders/patterns/pattern_imgs/'
     images.bullet = loadImage(imgPath + 'pizza.png')
     images.spacecraft = loadImage(imgPath + 'pizzaman.png')

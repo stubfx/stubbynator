@@ -58,7 +58,7 @@ function moveSnakes() {
 
 function preload() {
     // preload() runs once
-    let imgPath = '../imgs/snake/'
+    let imgPath = '/imgs/'
     let pngFileNames = [
         // {head: 'kappa', food: undefined},
         // {head: 'Theilluminati', food: undefined},

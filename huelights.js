@@ -56,7 +56,8 @@ function _ifTTT_ColorWebhook(right, left, backToNormal) {
     // because it doesn't handle the timeout.
     function httpCall(right, left) {
         let data = {
-            "value1": right,//right light
+            // value 1 is currently ignored cause the right light is used as custom rim light.
+            // "value1": right,//right light
             "value2": left ? left : right//left light
         }
         axios.post(IFTTT_URLS.hue_color + IFTTT_URLS.private_key, data)

@@ -23,11 +23,11 @@ socket.on('reload', () => {
 
 function createSnakes() {
     for (const configElement of snakeConfigArray) {
-        let posX = -100
-        let posY = -100
+        // let posX = -100
+        // let posY = -100
         let fm = new FoodManager(width, height, 'orange', configElement.food)
         foodManagerArray.push(fm)
-        snakeArray.push(new Snake(posX, posY, fm, configElement.head))
+        snakeArray.push(new Snake(fm, configElement.head))
     }
 }
 

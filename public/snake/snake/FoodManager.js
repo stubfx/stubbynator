@@ -62,8 +62,8 @@ class FoodManager {
 
     getNearestFood(snakeX, snakeY) {
         if (this.foodPieces.length === 0) {
-            // this is not edible (aka not visible) stuff that brings snakes back to base.
-            return new Food(-50, -50, "red", false, undefined)
+            // in this case there is no food left
+            return undefined
         }
         let closest = undefined
         let closestDistance = undefined

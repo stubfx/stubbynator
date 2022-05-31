@@ -20,6 +20,14 @@ io.on("connection", socket => {
 config(io)
 // WARNING !!! app.listen(3000); will not work here, as it creates a new HTTP server
 httpServer.listen(3000);
+
+
+// auto feed snake every
+const feedTimeout = 180 * 1000 // 3 mins
+setInterval(() => {
+    feedSnake()
+}, feedTimeout)
+
 app.use(express.static("public"));
 app.get('/reactorconsole', (request, response) => {
     // this line is for the socket? don't remember

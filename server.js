@@ -13,6 +13,7 @@ const httpServer = createServer(app);
 const options = { /* ... */};
 // noinspection JSValidateTypes
 const io = new Server(httpServer, options);
+// noinspection JSUnusedLocalSymbols
 io.on("connection", socket => {
     // logs? maybe, not today tho.
     console.log("connected.")
@@ -67,9 +68,6 @@ app.get('/enableColor', (req, res) => {
         return
     }
     res.send('missing enable param')
-})
-app.get('/projecthorizon', (req, res) => {
-    res.redirect('/projecthorizon.html')
 })
 
 twitchBot.onChatMessage((target, context, msg, self) => {

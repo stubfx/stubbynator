@@ -60,15 +60,15 @@ function preload() {
     // preload() runs once
     let imgPath = '/imgs/'
     let pngFileNames = [
-        // {head: 'kappa', food: undefined},
-        // {head: 'Theilluminati', food: undefined},
-        // {head: 'rakkAttack', food: undefined},
-        // {head: 'bibleThump', food: undefined},
-        // {head: 'brainslug', food: undefined},
-        // {head: 'FeelsBaguetteMan', food: undefined},
-        // {head: 'OMEGASP', food: undefined},
-        // {head: 'FeelsRageMan', food: undefined},
-        {head: 'timon_face', food: 'pizza'}
+        {head: 'kappa', food: undefined},
+        {head: 'Theilluminati', food: undefined},
+        {head: 'rakkAttack', food: undefined},
+        {head: 'bibleThump', food: undefined},
+        {head: 'brainslug', food: undefined},
+        {head: 'FeelsBaguetteMan', food: undefined},
+        {head: 'OMEGASP', food: undefined},
+        {head: 'FeelsRageMan', food: undefined},
+        // {head: 'timon_face', food: 'pizza'}
     ]
     for (const el of pngFileNames) {
         snakeConfigArray.push(

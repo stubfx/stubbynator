@@ -68,7 +68,7 @@ function preload() {
         {head: 'FeelsBaguetteMan', food: undefined},
         {head: 'OMEGASP', food: undefined},
         {head: 'FeelsRageMan', food: undefined},
-        {head: 'sir_chop_face', food: undefined},
+        {head: 'sir_chop_face', food: 'sir_chop_sausage'},
         {head: 'timon_face', food: 'pizza'}
     ]
     for (const el of pngFileNames) {

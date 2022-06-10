@@ -7,29 +7,7 @@ const opts = {
     },
     channels: [
         "stubFX",
-        "sypherludica",
-        "sammykirito",
-        "mrinvidioso",
-        "pastelladigranchio",
-        "waven87",
-        "isofls",
-        "zeb89",
-        "onestonedguy",
-        "marcomerrino",
-        "matteohs",
-        "gskianto",
-        "homyatol",
-        "patanux",
-        "pow3rtv",
-        "LCK_Korea",
-        "summit1g",
-        "lck",
-        "flashpoint",
-        "Sabaku_no_Sutoriimaa",
-        "ilgattosultubo",
-        "s1mpleyrqb",
-        "weplayesport_ru",
-        "therealknossi"
+        "rakki_tv"
     ]
 };
 
